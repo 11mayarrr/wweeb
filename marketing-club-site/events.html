@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>نادي التسويق — الفعاليات</title>
+<script>
+/* ?theme=dark أو ?theme=light لفرض وضع معيّن */
+(function(){var t=new URLSearchParams(location.search).get('theme');if(t==='dark'||t==='light')document.documentElement.classList.add(t);})();
+</script>
+<style>
+@font-face{font-family:"Lyon Arabic Display";src:url("assets/fonts/lyon-arabic-display-regular.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"Lyon Arabic Display";src:url("assets/fonts/lyon-arabic-display-medium.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"Lyon Arabic Display";src:url("assets/fonts/lyon-arabic-display-bold.otf") format("opentype");font-weight:700;font-display:swap}
+@font-face{font-family:"Noto Kufi Arabic";src:url("assets/fonts/noto-kufi-arabic.ttf") format("truetype");font-weight:100 900;font-display:swap}
+:root{
+--brand-purple:#6D0DD6;--brand-purple-deep:#33007E;--brand-purple-light:#CAB8E5;
+--brand-orange:#F26D24;--brand-teal:#004950;--brand-yellow:#FFE286;--brand-sky:#A9DEEF;
+--brand-bg:#FFFFFF;--brand-surface:#F4F4F7;--brand-foreground:#1B1B1F;--brand-muted:#5B5B66;
+--brand-line:rgb(27 27 31 / .12);
+--ink:var(--brand-purple-deep);--accent:var(--brand-purple);--card:#FFFFFF;--nav-bg:rgb(244 244 247 / .88);--band:var(--brand-purple-deep);
+--font-heading:"Lyon Arabic Display","Noto Kufi Arabic",serif;
+--font-body:"Noto Kufi Arabic",system-ui,sans-serif;
+}
+body{margin:0;background:#FFFFFF}
+a{color:var(--brand-purple);text-decoration:none}a:hover{color:var(--brand-purple-deep)}
+
+/* الوضع الداكن: يُفعَّل بإضافة class="dark" على <html>، أو تلقائياً حسب إعداد الجهاز */
+html.dark .page{--brand-bg:#33007E; --brand-surface:rgb(255 255 255 / .06); --brand-foreground:#FFFFFF; --brand-muted:#CAB8E5; --brand-line:rgb(255 255 255 / .16); --ink:#FFFFFF; --accent:#CAB8E5; --card:rgb(255 255 255 / .07); --nav-bg:rgb(255 255 255 / .1); --band:rgb(0 0 0 / .22);}
+html.dark body{background:#33007E}
+@media (prefers-color-scheme: dark){html:not(.light) .page{--brand-bg:#33007E; --brand-surface:rgb(255 255 255 / .06); --brand-foreground:#FFFFFF; --brand-muted:#CAB8E5; --brand-line:rgb(255 255 255 / .16); --ink:#FFFFFF; --accent:#CAB8E5; --card:rgb(255 255 255 / .07); --nav-bg:rgb(255 255 255 / .1); --band:rgb(0 0 0 / .22);}html:not(.light) body{background:#33007E}html:not(.light) .logo-light{display:none!important}html:not(.light) .logo-dark{display:block!important}}
+.logo-dark{display:none!important}
+html.dark .logo-light{display:none!important}
+html.dark .logo-dark{display:block!important}
+</style>
+</head>
+<body>
+<div class="page" dir="rtl" style="margin: 0 auto; width: 1440px; height: 2905px; position: relative; overflow: hidden; background: var(--brand-bg); color: var(--brand-foreground); font-family: var(--font-body); font-size: 15px; line-height: 1.85;">
+
+<!-- ============ الهيدر ============ -->
+<div style="height: 185px; box-sizing: border-box; padding: 54px 54px 0;">
+  <header style="height: 77px; box-sizing: border-box; padding: 0 24px 0 30px; display: flex; align-items: center; justify-content: space-between; border-radius: 18px; background: var(--nav-bg);">
+    <a href="index.html" aria-label="نادي التسويق — الرئيسية" style="display: flex; align-items: center;"><img class="logo-light" src="assets/img/logo-horizontal-color.png" alt="نادي التسويق — Marketing Club" style="height: 48px; width: auto; display: block;"><img class="logo-dark" src="assets/img/logo-horizontal-white.png" alt="" style="height: 48px; width: auto; display: block;"></a>
+    <nav aria-label="القائمة الرئيسية" style="display: flex; align-items: center; gap: 70px;">
+      <a href="index.html" style="width: 130px; height: 31px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: var(--brand-purple); color: #FFFFFF; font-size: 15px; line-height: 1;">الرئيسية</a>
+      <a href="about.html" style="width: 130px; height: 31px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: var(--brand-sky); color: var(--brand-purple-deep); font-size: 15px; line-height: 1;">من نحن</a>
+      <a href="#newsletter" style="width: 130px; height: 31px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: var(--brand-orange); color: #FFFFFF; font-size: 15px; line-height: 1;">تواصل معنا</a>
+      <a href="index.html" style="width: 140px; height: 31px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: var(--brand-teal); color: #FFFFFF; font-size: 15px; line-height: 1;">أسئلة شائعة</a>
+    </nav>
+    <button type="button" aria-label="القائمة" style="width: 44px; height: 44px; padding: 0; border: 0; background: transparent; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; cursor: pointer;">
+      <span style="width: 38px; height: 2px; background: var(--ink);"></span>
+      <span style="width: 38px; height: 2px; background: var(--ink);"></span>
+      <span style="width: 38px; height: 2px; background: var(--ink);"></span>
+    </button>
+  </header>
+</div>
+
+<!-- ============ العنوان ============ -->
+<section style="height: 220px; box-sizing: border-box; padding: 24px 170px 0;">
+  <span style="font-size: 15px; color: var(--accent);">فعاليات</span>
+  <h1 style="margin: 4px 0 8px; font-family: var(--font-heading); font-weight: 700; font-size: 57px; line-height: 1.2; color: var(--ink);">فعاليات النادي</h1>
+  <p style="margin: 0; color: var(--brand-muted); font-size: 15px;">ورش ولقاءات ومسابقات مفتوحة للطلاب والطالبات. سجّل مبكراً، المقاعد محدودة.</p>
+</section>
+
+<!-- ============ القادمة + الأرشيف ============ -->
+<section style="position: relative; height: 1640px; box-sizing: border-box; padding: 96px 170px; background: var(--band); color: #FFFFFF; overflow: hidden;">
+
+  <div style="height: 640px; display: flex; align-items: center; justify-content: space-between; gap: 64px;">
+    <div style="width: 440px; flex-shrink: 0; display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 15px; color: var(--brand-purple-light);">الفعاليات القادمة</span>
+      <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 57px; line-height: 1.2;">لا تفوّت القادم</h2>
+      <p style="margin: 0; font-size: 15px; color: var(--brand-purple-light);">عدّاد تنازلي حيّ لكل فعالية. اسحب البطاقة لترى التالية، واحجز مقعدك قبل أن تمتلئ.</p>
+      <div style="display: flex; align-items: center; gap: 20px; margin-top: 32px;">
+        <button type="button" aria-label="الفعالية السابقة" style="width: 52px; height: 52px; border-radius: 999px; border: 0; background: #FFFFFF; color: var(--brand-purple); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+        </button>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <div style="display: flex; gap: 6px;">
+            <span style="width: 6px; height: 6px; border-radius: 999px; background: var(--brand-purple-light);"></span>
+            <span style="width: 6px; height: 6px; border-radius: 999px; background: var(--brand-purple-light);"></span>
+            <span style="width: 6px; height: 6px; border-radius: 999px; background: var(--brand-purple-light);"></span>
+            <span style="width: 24px; height: 6px; border-radius: 999px; background: var(--brand-yellow);"></span>
+          </div>
+          <span style="font-size: 11px; color: var(--brand-purple-light);">01 / 04</span>
+        </div>
+        <button type="button" aria-label="الفعالية التالية" style="width: 52px; height: 52px; border-radius: 999px; border: 0; box-shadow: inset 0 0 0 1.5px var(--brand-purple-light); background: transparent; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <div style="position: relative; width: 520px; height: 620px; flex-shrink: 0;">
+      <img src="assets/img/element-ring-gradient.png" alt="" aria-hidden="true" style="position: absolute; left: -120px; top: 40px; width: 560px; height: 560px; pointer-events: none;">
+      <div aria-hidden="true" style="position: absolute; left: 24px; right: 24px; top: 28px; bottom: -14px; border-radius: 18px; background: var(--brand-purple-light);"></div>
+      <article style="position: absolute; inset: 0; border-radius: 18px; background: #FFFFFF; color: #1B1B1F; --ink:#33007E; --brand-foreground:#1B1B1F; --brand-muted:#5B5B66; --brand-surface:#F4F4F7; --brand-line:rgb(27 27 31 / .12); --accent:#6D0DD6;  overflow: hidden; display: flex; flex-direction: column;">
+        <div style="position: relative; height: 240px; flex-shrink: 0;">
+          <img src="assets/img/solutions-talk.jpg" alt="متحدث في ورشة عمل" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <span style="position: absolute; left: 16px; top: 16px; padding: 2px 14px; border-radius: 999px; background: var(--brand-purple-deep); color: #FFFFFF; font-size: 11px;">بعد 14 يوماً</span>
+          <div style="position: absolute; right: 16px; top: 16px; width: 72px; height: 72px; border-radius: 18px; background: var(--brand-orange); color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.2;">
+            <b style="font-family: var(--font-heading); font-weight: 700; font-size: 29px;">11</b>
+            <span style="font-size: 11px;">أكتوبر</span>
+          </div>
+        </div>
+        <div style="flex-grow: 1; padding: 20px 28px 24px; display: flex; flex-direction: column; gap: 6px; border-top: 2px dashed var(--brand-line);">
+          <span style="font-size: 11px; color: var(--accent);">ورشة عمل</span>
+          <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 29px; line-height: 1.25; color: var(--ink);">بناء خطة تسويق في يوم</h3>
+          <span style="font-size: 15px; color: var(--brand-muted);">4:00 م · كلية إدارة الأعمال</span>
+          <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px;">
+            <div style="text-align: center; border-radius: 18px; background: var(--brand-surface); padding: 8px 0; line-height: 1.3;"><b style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 29px; color: var(--ink);">13</b><span style="font-size: 11px; color: var(--brand-muted);">يوم</span></div>
+            <div style="text-align: center; border-radius: 18px; background: var(--brand-surface); padding: 8px 0; line-height: 1.3;"><b style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 29px; color: var(--ink);">14</b><span style="font-size: 11px; color: var(--brand-muted);">ساعة</span></div>
+            <div style="text-align: center; border-radius: 18px; background: var(--brand-surface); padding: 8px 0; line-height: 1.3;"><b style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 29px; color: var(--ink);">11</b><span style="font-size: 11px; color: var(--brand-muted);">دقيقة</span></div>
+            <div style="text-align: center; border-radius: 18px; background: var(--brand-purple); padding: 8px 0; line-height: 1.3; color: #FFFFFF;"><b style="display: block; font-family: var(--font-heading); font-weight: 700; font-size: 29px;">19</b><span style="font-size: 11px;">ثانية</span></div>
+          </div>
+          <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+            <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-size: 11px; color: var(--brand-muted);">باقي 8 مقاعد</span>
+              <div style="height: 6px; border-radius: 999px; background: var(--brand-surface); overflow: hidden;"><div style="width: 70%; height: 100%; border-radius: 999px; background: var(--brand-orange);"></div></div>
+            </div>
+            <a href="#" style="display: inline-flex; align-items: center; padding: 13px 26px; border-radius: 999px; background: var(--brand-purple); color: #FFFFFF; font-size: 15px; font-weight: 600; line-height: 1.4;">احجز مقعدك</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div style="margin-top: 96px;">
+    <span style="font-size: 15px; color: var(--brand-purple-light);">أرشيف الفعاليات</span>
+    <h2 style="margin: 4px 0 8px; font-family: var(--font-heading); font-weight: 700; font-size: 57px; line-height: 1.2;">الفعاليات السابقة</h2>
+    <p style="margin: 0; font-size: 15px; color: var(--brand-purple-light);">تذاكر استُخدمت، وأثر بقي.</p>
+  </div>
+  <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;">
+    <article style="border-radius: 18px; background: #FFFFFF; color: #1B1B1F; --ink:#33007E; --brand-foreground:#1B1B1F; --brand-muted:#5B5B66; --brand-surface:#F4F4F7; --brand-line:rgb(27 27 31 / .12); --accent:#6D0DD6;  overflow: hidden;">
+      <div style="position: relative; height: 240px;">
+        <img src="assets/img/workshop.jpg" alt="ورشة في برنامج نقلة" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <span style="position: absolute; right: 16px; bottom: 16px; padding: 0 14px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); font-size: 11px; line-height: 2.2;">برنامج تدريبي</span>
+      </div>
+      <div style="padding: 20px 24px 24px; border-top: 2px dashed var(--brand-line);">
+        <span style="font-size: 11px; color: var(--accent);">14-11 مايو 2026 · مع EXCITED</span>
+        <h3 style="margin: 2px 0 6px; font-family: var(--font-heading); font-weight: 700; font-size: 29px; line-height: 1.25; color: var(--ink);">نقلة 2026</h3>
+        <p style="margin: 0; color: var(--brand-muted); font-size: 15px;">ورش عمل لتعرّف المشاركين على قطاع إدارة الفعاليات من منظور مهني، من الفكرة والتخطيط إلى التنفيذ والتقييم.</p>
+      </div>
+    </article>
+    <article style="border-radius: 18px; background: #FFFFFF; color: #1B1B1F; --ink:#33007E; --brand-foreground:#1B1B1F; --brand-muted:#5B5B66; --brand-surface:#F4F4F7; --brand-line:rgb(27 27 31 / .12); --accent:#6D0DD6;  overflow: hidden;">
+      <div style="position: relative; height: 240px;">
+        <img src="assets/img/writing.jpg" alt="مشارك في صُنّاع الحلول" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <span style="position: absolute; right: 16px; bottom: 16px; padding: 0 14px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); font-size: 11px; line-height: 2.2;">برنامج ريادي</span>
+      </div>
+      <div style="padding: 20px 24px 24px; border-top: 2px dashed var(--brand-line);">
+        <span style="font-size: 11px; color: var(--accent);">5 أيام مكثّفة · مع ZANJABIL</span>
+        <h3 style="margin: 2px 0 6px; font-family: var(--font-heading); font-weight: 700; font-size: 29px; line-height: 1.25; color: var(--ink);">صُنّاع الحلول</h3>
+        <p style="margin: 0; color: var(--brand-muted); font-size: 15px;">خمسة أيام مكثّفة لتحويل تحديات المنشآت الصغيرة والمتوسطة إلى مشاريع قابلة للتنفيذ.</p>
+      </div>
+    </article>
+    <article style="border-radius: 18px; background: #FFFFFF; color: #1B1B1F; --ink:#33007E; --brand-foreground:#1B1B1F; --brand-muted:#5B5B66; --brand-surface:#F4F4F7; --brand-line:rgb(27 27 31 / .12); --accent:#6D0DD6;  overflow: hidden;">
+      <div style="position: relative; height: 240px;">
+        <img src="assets/img/group.jpg" alt="مشاركون في عقلية مدير المشروع" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <span style="position: absolute; right: 16px; bottom: 16px; padding: 0 14px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); font-size: 11px; line-height: 2.2;">ورش وتحكيم</span>
+      </div>
+      <div style="padding: 20px 24px 24px; border-top: 2px dashed var(--brand-line);">
+        <span style="font-size: 11px; color: var(--accent);">ورشتان تدريبيتان · +30 مشاركاً</span>
+        <h3 style="margin: 2px 0 6px; font-family: var(--font-heading); font-weight: 700; font-size: 29px; line-height: 1.25; color: var(--ink);">عقلية مدير المشروع</h3>
+        <p style="margin: 0; color: var(--brand-muted); font-size: 15px;">برنامج شارك فيه أكثر من 30 مشاركاً ومشاركة، بتنظيم أكثر من 15 عضواً و7 محكّمين ومشرفين، ورعاية 4 جهات.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ النشرة ============ -->
+<section id="newsletter" style="position: relative; height: 520px; box-sizing: border-box; background: var(--brand-purple); color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center;">
+  <svg width="360" height="360" viewBox="0 0 100 100" aria-hidden="true" style="position: absolute; left: -150px; bottom: -170px; color: var(--brand-purple-deep);"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="14"></circle></svg>
+  <svg width="300" height="300" viewBox="0 0 100 100" aria-hidden="true" style="position: absolute; right: -130px; top: -140px; color: var(--brand-purple-deep);"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="14"></circle></svg>
+  <h2 style="position: relative; margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 57px; line-height: 1.2;">ليصلك الجديد أولاً</h2>
+  <p style="position: relative; margin: 0; font-size: 15px; color: var(--brand-purple-light);">نشرة واحدة كل شهر: الفعاليات القادمة، الفرص، وأعداد MKT BUZZ.</p>
+  <form style="position: relative; margin-top: 20px; width: 560px; display: flex; flex-direction: column; gap: 8px;">
+    <div style="display: flex; gap: 12px;">
+      <label for="nl-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">بريدك الجامعي</label>
+      <input id="nl-email" type="email" placeholder="بريدك الجامعي" style="flex-grow: 1; min-width: 0; height: 52px; box-sizing: border-box; border: 0; border-radius: 999px; padding: 0 22px; background: #FFFFFF; font-family: var(--font-body); font-size: 15px; color: #1B1B1F;">
+      <button type="submit" style="height: 52px; border: 0; cursor: pointer; padding: 0 32px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); font-family: var(--font-body); font-size: 15px; font-weight: 600;">اشترك</button>
+    </div>
+    <span style="font-size: 11px; color: var(--brand-purple-light); text-align: right;">نستخدم بريدك للنشرة فقط.</span>
+  </form>
+  <span style="position: relative; margin-top: 16px; font-size: 15px;">#نُحاكي_الواقع</span>
+</section>
+
+<!-- ============ التذييل ============ -->
+<footer style="height: 340px; box-sizing: border-box; padding: 56px 170px 32px; background: var(--brand-sky); color: var(--brand-purple-deep); display: flex; flex-direction: column; align-items: center; text-align: center;">
+  <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 41px; line-height: 1.25;">نادي التسويق</h2>
+  <p style="margin: 0; font-size: 15px;">نقرّب المسافة بين ما تدرسه وما يطلبه السوق</p>
+  <div style="display: flex; gap: 14px; margin-top: 20px;">
+    <a href="#" aria-label="لينكدإن" style="width: 48px; height: 48px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg></a>
+    <a href="#" aria-label="إنستغرام" style="width: 48px; height: 48px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.8"></circle></svg></a>
+    <a href="#" aria-label="البريد الإلكتروني" style="width: 48px; height: 48px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></a>
+  </div>
+  <div style="margin-top: auto; width: 100%; padding-top: 16px; border-top: 1px solid var(--brand-line); font-size: 11px;">© 2026 نادي التسويق — جامعة الملك سعود.</div>
+</footer>
+
+</div>
+</body>
+</html>

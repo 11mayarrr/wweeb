@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>نادي التسويق — هيكلة النادي</title>
+<script>
+/* ?theme=dark أو ?theme=light لفرض وضع معيّن */
+(function(){var t=new URLSearchParams(location.search).get('theme');if(t==='dark'||t==='light')document.documentElement.classList.add(t);})();
+</script>
+<style>
+@font-face{font-family:"Lyon Arabic Display";src:url("assets/fonts/lyon-arabic-display-regular.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"Lyon Arabic Display";src:url("assets/fonts/lyon-arabic-display-medium.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"Lyon Arabic Display";src:url("assets/fonts/lyon-arabic-display-bold.otf") format("opentype");font-weight:700;font-display:swap}
+@font-face{font-family:"Noto Kufi Arabic";src:url("assets/fonts/noto-kufi-arabic.ttf") format("truetype");font-weight:100 900;font-display:swap}
+:root{
+--brand-purple:#6D0DD6;--brand-purple-deep:#33007E;--brand-purple-light:#CAB8E5;
+--brand-orange:#F26D24;--brand-teal:#004950;--brand-yellow:#FFE286;--brand-sky:#A9DEEF;
+--brand-bg:#FFFFFF;--brand-surface:#F4F4F7;--brand-foreground:#1B1B1F;--brand-muted:#5B5B66;
+--brand-line:rgb(27 27 31 / .12);
+--ink:var(--brand-purple-deep);--accent:var(--brand-purple);--card:#FFFFFF;--nav-bg:rgb(244 244 247 / .88);--band:var(--brand-purple-deep);
+--font-heading:"Lyon Arabic Display","Noto Kufi Arabic",serif;
+--font-body:"Noto Kufi Arabic",system-ui,sans-serif;
+}
+body{margin:0;background:#FFFFFF}
+a{color:var(--brand-purple);text-decoration:none}a:hover{color:var(--brand-purple-deep)}
+
+/* الوضع الداكن: يُفعَّل بإضافة class="dark" على <html>، أو تلقائياً حسب إعداد الجهاز */
+html.dark .page{--brand-bg:#33007E; --brand-surface:rgb(255 255 255 / .06); --brand-foreground:#FFFFFF; --brand-muted:#CAB8E5; --brand-line:rgb(255 255 255 / .16); --ink:#FFFFFF; --accent:#CAB8E5; --card:rgb(255 255 255 / .07); --nav-bg:rgb(255 255 255 / .1); --band:rgb(0 0 0 / .22);}
+html.dark body{background:#33007E}
+@media (prefers-color-scheme: dark){html:not(.light) .page{--brand-bg:#33007E; --brand-surface:rgb(255 255 255 / .06); --brand-foreground:#FFFFFF; --brand-muted:#CAB8E5; --brand-line:rgb(255 255 255 / .16); --ink:#FFFFFF; --accent:#CAB8E5; --card:rgb(255 255 255 / .07); --nav-bg:rgb(255 255 255 / .1); --band:rgb(0 0 0 / .22);}html:not(.light) body{background:#33007E}html:not(.light) .logo-light{display:none!important}html:not(.light) .logo-dark{display:block!important}}
+.logo-dark{display:none!important}
+html.dark .logo-light{display:none!important}
+html.dark .logo-dark{display:block!important}
+</style>
+</head>
+<body>
+<div class="page" dir="rtl" style="margin: 0 auto; width: 1440px; height: 2775px; position: relative; overflow: hidden; background: var(--brand-bg); color: var(--brand-foreground); font-family: var(--font-body); font-size: 15px; line-height: 1.85;">
+
+<!-- ============ الهيدر ============ -->
+<div style="height: 185px; box-sizing: border-box; padding: 54px 54px 0;">
+  <header style="height: 77px; box-sizing: border-box; padding: 0 24px 0 30px; display: flex; align-items: center; justify-content: space-between; border-radius: 18px; background: var(--nav-bg);">
+    <a href="index.html" aria-label="نادي التسويق — الرئيسية" style="display: flex; align-items: center;"><img class="logo-light" src="assets/img/logo-horizontal-color.png" alt="نادي التسويق — Marketing Club" style="height: 48px; width: auto; display: block;"><img class="logo-dark" src="assets/img/logo-horizontal-white.png" alt="" style="height: 48px; width: auto; display: block;"></a>
+    <nav aria-label="القائمة الرئيسية" style="display: flex; align-items: center; gap: 70px;">
+      <a href="index.html" style="width: 130px; height: 31px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: var(--brand-purple); color: #FFFFFF; font-size: 15px; line-height: 1;">الرئيسية</a>
+      <a href="about.html" style="width: 130px; height: 31px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: var(--brand-sky); color: var(--brand-purple-deep); font-size: 15px; line-height: 1;">من نحن</a>
+      <a href="#newsletter" style="width: 130px; height: 31px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: var(--brand-orange); color: #FFFFFF; font-size: 15px; line-height: 1;">تواصل معنا</a>
+      <a href="index.html" style="width: 140px; height: 31px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: var(--brand-teal); color: #FFFFFF; font-size: 15px; line-height: 1;">أسئلة شائعة</a>
+    </nav>
+    <button type="button" aria-label="القائمة" style="width: 44px; height: 44px; padding: 0; border: 0; background: transparent; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; cursor: pointer;">
+      <span style="width: 38px; height: 2px; background: var(--ink);"></span>
+      <span style="width: 38px; height: 2px; background: var(--ink);"></span>
+      <span style="width: 38px; height: 2px; background: var(--ink);"></span>
+    </button>
+  </header>
+</div>
+
+<!-- ============ من يقود النادي ============ -->
+<section style="height: 460px; box-sizing: border-box; padding: 24px 170px 0; display: flex; flex-direction: column; gap: 36px;">
+  <div>
+    <div style="display: flex; align-items: center; gap: 8px; color: var(--accent); font-size: 15px;">
+      <svg width="18" height="18" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="14"></circle><circle cx="50" cy="50" r="16" fill="none" stroke="currentColor" stroke-width="14"></circle></svg>هيكلة النادي · الفصل الدراسي الأول ١٤٤٨هـ
+    </div>
+    <h1 style="margin: 4px 0 0; font-family: var(--font-heading); font-weight: 700; font-size: 57px; line-height: 1.2; color: var(--ink);">من يقود النادي</h1>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 15px; color: var(--brand-muted);">القيادة</span>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+        <div style="height: 120px; border-radius: 18px; background: var(--brand-purple-deep); color: #FFFFFF; box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; gap: 16px; box-shadow: inset 0 0 0 1px var(--brand-line);">
+          <span style="width: 52px; height: 52px; flex: none; border-radius: 999px; background: var(--brand-purple); display: flex; align-items: center; justify-content: center; font-size: 21px; font-weight: 700;">ع</span>
+          <span style="display: flex; flex-direction: column; line-height: 1.6;"><span style="font-size: 15px; color: var(--brand-yellow);">رئيس النادي</span><b style="font-size: 21px;">عبدالسلام العبدالكريم</b></span>
+        </div>
+        <div style="height: 120px; border-radius: 18px; background: var(--brand-purple-deep); color: #FFFFFF; box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; gap: 16px; box-shadow: inset 0 0 0 1px var(--brand-line);">
+          <span style="width: 52px; height: 52px; flex: none; border-radius: 999px; background: var(--brand-purple); display: flex; align-items: center; justify-content: center; font-size: 21px; font-weight: 700;">ر</span>
+          <span style="display: flex; flex-direction: column; line-height: 1.6;"><span style="font-size: 15px; color: var(--brand-yellow);">نائب النادي</span><b style="font-size: 21px;">ريما الهويمل</b></span>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 15px; color: var(--brand-muted);">المستشارون</span>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+        <div style="height: 120px; border-radius: 18px; background: var(--card); border: 1px solid var(--brand-line); box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; gap: 16px;">
+          <span style="width: 52px; height: 52px; flex: none; border-radius: 999px; background: var(--brand-sky); color: var(--brand-purple-deep); display: flex; align-items: center; justify-content: center; font-size: 21px; font-weight: 700;">ر</span>
+          <span style="display: flex; flex-direction: column; line-height: 1.6;"><span style="font-size: 15px; color: var(--brand-muted);">مستشار النادي</span><b style="font-size: 21px; color: var(--ink);">راكان الدبيب</b></span>
+        </div>
+        <div style="height: 120px; border-radius: 18px; background: var(--card); border: 1px solid var(--brand-line); box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; gap: 16px;">
+          <span style="width: 52px; height: 52px; flex: none; border-radius: 999px; background: var(--brand-sky); color: var(--brand-purple-deep); display: flex; align-items: center; justify-content: center; font-size: 21px; font-weight: 700;">ع</span>
+          <span style="display: flex; flex-direction: column; line-height: 1.6;"><span style="font-size: 15px; color: var(--brand-muted);">مستشار النادي</span><b style="font-size: 21px; color: var(--ink);">العنود العبدان</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ الإدارات ============ -->
+<section style="height: 850px; box-sizing: border-box; padding: 80px 170px; background: var(--brand-surface); display: flex; flex-direction: column; gap: 24px;">
+  <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 57px; line-height: 1.2; color: var(--ink);">الإدارات</h2>
+
+  <div role="tablist" aria-label="الإدارات" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px;">
+    <button type="button" role="tab" aria-selected="true" style="height: 72px; border: 0; border-radius: 18px; background: var(--brand-purple); color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-body); font-size: 15px; font-weight: 700; cursor: pointer;">
+      <b style="font-family: var(--font-heading); font-size: 21px;">01</b><span style="width: 8px; height: 8px; border-radius: 999px; background: var(--brand-sky);"></span>التقني
+    </button>
+    <button type="button" role="tab" aria-selected="false" style="height: 72px; border: 1px solid var(--brand-line); border-radius: 18px; background: var(--card); color: var(--brand-foreground); display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-body); font-size: 15px; font-weight: 700; cursor: pointer;">
+      <b style="font-family: var(--font-heading); font-size: 21px; color: var(--ink);">02</b><span style="width: 8px; height: 8px; border-radius: 999px; background: var(--brand-teal); box-shadow: 0 0 0 1px var(--brand-line);"></span>التطوير الأعمال
+    </button>
+    <button type="button" role="tab" aria-selected="false" style="height: 72px; border: 1px solid var(--brand-line); border-radius: 18px; background: var(--card); color: var(--brand-foreground); display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-body); font-size: 15px; font-weight: 700; cursor: pointer;">
+      <b style="font-family: var(--font-heading); font-size: 21px; color: var(--ink);">03</b><span style="width: 8px; height: 8px; border-radius: 999px; background: var(--brand-orange);"></span>التسويق الإعلامي
+    </button>
+    <button type="button" role="tab" aria-selected="false" style="height: 72px; border: 1px solid var(--brand-line); border-radius: 18px; background: var(--card); color: var(--brand-foreground); display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-body); font-size: 15px; font-weight: 700; cursor: pointer;">
+      <b style="font-family: var(--font-heading); font-size: 21px; color: var(--ink);">04</b><span style="width: 8px; height: 8px; border-radius: 999px; background: var(--brand-purple);"></span>إدارة المشاريع
+    </button>
+    <button type="button" role="tab" aria-selected="false" style="height: 72px; border: 1px solid var(--brand-line); border-radius: 18px; background: var(--card); color: var(--brand-foreground); display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-body); font-size: 15px; font-weight: 700; cursor: pointer;">
+      <b style="font-family: var(--font-heading); font-size: 21px; color: var(--ink);">05</b><span style="width: 8px; height: 8px; border-radius: 999px; background: var(--brand-yellow);"></span>الجودة والتطوير
+    </button>
+  </div>
+
+  <div role="tabpanel" style="border-radius: 18px; background: var(--card); border: 1px solid var(--brand-line); box-sizing: border-box; padding: 40px 44px; display: flex; flex-direction: column; gap: 32px;">
+    <div>
+      <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 41px; line-height: 1.25; color: var(--ink);">التقني</h3>
+      <p style="margin: 4px 0 0; font-size: 15px; color: var(--brand-muted);">[وصف قسم التقني: سطر أو سطرين عن دوره ومهامه]</p>
+    </div>
+    <div style="display: flex; gap: 40px;">
+      <div style="width: 340px; flex-shrink: 0; display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 11px; color: var(--brand-muted);">قيادة القسم</span>
+        <div style="height: 72px; border-radius: 14px; background: var(--brand-purple-deep); color: #FFFFFF; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: inset 0 0 0 1px var(--brand-line);"><b style="font-size: 15px;">سعيد الدوسري</b><span style="font-size: 11px; color: var(--brand-yellow);">قائد القسم</span></div>
+        <div style="height: 72px; border-radius: 14px; background: var(--brand-purple-deep); color: #FFFFFF; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: inset 0 0 0 1px var(--brand-line);"><b style="font-size: 15px;">ميار العريني</b><span style="font-size: 11px; color: var(--brand-yellow);">نائب القسم</span></div>
+      </div>
+      <table style="flex-grow: 1; border-collapse: collapse; font-size: 15px; text-align: right;">
+        <thead>
+          <tr style="color: var(--brand-muted); font-size: 11px;">
+            <th scope="col" style="font-weight: 400; padding: 0 0 12px; border-bottom: 1px solid var(--brand-line);">الفريق</th>
+            <th scope="col" style="font-weight: 400; padding: 0 0 12px; border-bottom: 1px solid var(--brand-line);">قائد الفريق</th>
+            <th scope="col" style="font-weight: 400; padding: 0 0 12px; border-bottom: 1px solid var(--brand-line);">نائب الفريق</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 18px 0; border-bottom: 1px solid var(--brand-line); font-weight: 700; color: var(--ink);">فريق تطوير البرمجيات</td>
+            <td style="padding: 18px 0; border-bottom: 1px solid var(--brand-line);">غناتي الجلعود</td>
+            <td style="padding: 18px 0; border-bottom: 1px solid var(--brand-line);">سعود الحوبان</td>
+          </tr>
+          <tr>
+            <td style="padding: 18px 0; border-bottom: 1px solid var(--brand-line); font-weight: 700; color: var(--ink);">فريق البيانات والأنظمة</td>
+            <td style="padding: 18px 0; border-bottom: 1px solid var(--brand-line);">لينه الخضير</td>
+            <td style="padding: 18px 0; border-bottom: 1px solid var(--brand-line);">لطيفة الموسى</td>
+          </tr>
+          <tr>
+            <td style="padding: 18px 0; font-weight: 700; color: var(--ink);">فريق تجربة المستخدم</td>
+            <td style="padding: 18px 0;">ود المرزوق</td>
+            <td style="padding: 18px 0;">نوره السلمي</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ انضم للفريق — التسجيل مغلق ============ -->
+<section style="height: 420px; box-sizing: border-box; padding: 60px 170px;">
+  <div style="position: relative; height: 300px; border-radius: 18px; background: var(--card); border: 1px solid var(--brand-line); overflow: hidden;">
+    <div aria-hidden="true" style="position: absolute; inset: 0; box-sizing: border-box; padding: 48px 56px; display: flex; flex-direction: column; justify-content: center; gap: 10px; filter: blur(6px); opacity: .5; pointer-events: none; user-select: none;">
+      <svg width="220" height="220" viewBox="0 0 100 100" style="position: absolute; left: -24px; bottom: -110px; color: var(--accent); transform: scaleX(-1);"><path d="M 8 92 A 84 84 0 0 1 92 8" fill="none" stroke="currentColor" stroke-width="16"></path></svg>
+      <div style="display: flex; align-items: center;">
+        <span style="width: 40px; height: 40px; border-radius: 999px; background: var(--brand-purple); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px;">ع</span>
+        <span style="width: 40px; height: 40px; border-radius: 999px; background: var(--brand-orange); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; margin-right: -8px;">ر</span>
+        <span style="width: 40px; height: 40px; border-radius: 999px; background: var(--brand-teal); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; margin-right: -8px;">ج</span>
+        <span style="width: 40px; height: 40px; border-radius: 999px; background: var(--brand-sky); color: var(--brand-purple-deep); display: flex; align-items: center; justify-content: center; font-size: 15px; margin-right: -8px;">س</span>
+      </div>
+      <span style="font-family: var(--font-heading); font-weight: 700; font-size: 41px; line-height: 1.25; color: var(--ink);">تبغى تكون جزءاً من الفريق؟</span>
+      <span style="font-size: 15px; color: var(--brand-muted);">نفتح باب الانضمام للإدارات في بداية كل فصل دراسي.</span>
+      <span style="align-self: flex-start; margin-top: 8px; padding: 13px 26px; border-radius: 999px; background: var(--brand-purple); color: #FFFFFF; font-size: 15px; font-weight: 600;">انضم إلينا</span>
+    </div>
+    <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center;">
+      <span style="width: 64px; height: 64px; border-radius: 999px; background: var(--brand-purple); color: #FFFFFF; display: flex; align-items: center; justify-content: center;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+      </span>
+      <h2 style="margin: 8px 0 0; font-family: var(--font-heading); font-weight: 700; font-size: 29px; line-height: 1.25; color: var(--ink);">التسجيل مغلق حالياً</h2>
+      <p style="margin: 0; font-size: 15px; color: var(--brand-muted);">نفتح باب الانضمام للإدارات في بداية كل فصل دراسي.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ النشرة ============ -->
+<section id="newsletter" style="position: relative; height: 520px; box-sizing: border-box; background: var(--brand-purple); color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center;">
+  <svg width="360" height="360" viewBox="0 0 100 100" aria-hidden="true" style="position: absolute; left: -150px; bottom: -170px; color: var(--brand-purple-deep);"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="14"></circle></svg>
+  <svg width="300" height="300" viewBox="0 0 100 100" aria-hidden="true" style="position: absolute; right: -130px; top: -140px; color: var(--brand-purple-deep);"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="14"></circle></svg>
+  <h2 style="position: relative; margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 57px; line-height: 1.2;">ليصلك الجديد أولاً</h2>
+  <p style="position: relative; margin: 0; font-size: 15px; color: var(--brand-purple-light);">نشرة واحدة كل شهر: الفعاليات القادمة، الفرص، وأعداد MKT BUZZ.</p>
+  <form style="position: relative; margin-top: 20px; width: 560px; display: flex; flex-direction: column; gap: 8px;">
+    <div style="display: flex; gap: 12px;">
+      <label for="nl-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">بريدك الجامعي</label>
+      <input id="nl-email" type="email" placeholder="بريدك الجامعي" style="flex-grow: 1; min-width: 0; height: 52px; box-sizing: border-box; border: 0; border-radius: 999px; padding: 0 22px; background: #FFFFFF; font-family: var(--font-body); font-size: 15px; color: #1B1B1F;">
+      <button type="submit" style="height: 52px; border: 0; cursor: pointer; padding: 0 32px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); font-family: var(--font-body); font-size: 15px; font-weight: 600;">اشترك</button>
+    </div>
+    <span style="font-size: 11px; color: var(--brand-purple-light); text-align: right;">نستخدم بريدك للنشرة فقط.</span>
+  </form>
+  <span style="position: relative; margin-top: 16px; font-size: 15px;">#نُحاكي_الواقع</span>
+</section>
+
+<!-- ============ التذييل ============ -->
+<footer style="height: 340px; box-sizing: border-box; padding: 56px 170px 32px; background: var(--brand-sky); color: var(--brand-purple-deep); display: flex; flex-direction: column; align-items: center; text-align: center;">
+  <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 41px; line-height: 1.25;">نادي التسويق</h2>
+  <p style="margin: 0; font-size: 15px;">نقرّب المسافة بين ما تدرسه وما يطلبه السوق</p>
+  <div style="display: flex; gap: 14px; margin-top: 20px;">
+    <a href="#" aria-label="لينكدإن" style="width: 48px; height: 48px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg></a>
+    <a href="#" aria-label="إنستغرام" style="width: 48px; height: 48px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.8"></circle></svg></a>
+    <a href="#" aria-label="البريد الإلكتروني" style="width: 48px; height: 48px; border-radius: 999px; background: #FFFFFF; color: var(--brand-purple-deep); display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></a>
+  </div>
+  <div style="margin-top: auto; width: 100%; padding-top: 16px; border-top: 1px solid var(--brand-line); font-size: 11px;">© 2026 نادي التسويق — جامعة الملك سعود.</div>
+</footer>
+
+</div>
+</body>
+</html>
